@@ -1,0 +1,1413 @@
+/* ===== RESETS AND DEFAULTS ===== */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	line-height: 1.5;
+	background-image: url(/assets/images/background.JPG);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -100;
+	position: relative;
+	overflow: hidden;
+}
+/* var() values for group coloring */
+:root {
+	--color1: white;
+	--color2: black;
+	--borderColor: #43caff91;
+	--bgColor: rgba(0, 0, 0, 0.562);
+	--windowColor: rgba(0, 0, 0, 0.459);
+	--bulletActive: #72f8f7;
+	--bulletIdle: #72f8f750;
+	--hover: rgb(0, 217, 255);
+	--bubble11: #43ffff;
+	--bubble12: #43ffff75;
+	--bubble13: #43ffff50;
+	--bubble14: #43ffff25;
+	--bubble21: #42ff97;
+	--bubble22: #42ff9775;
+	--bubble23: #42ff9750;
+	--bubble24: #42ff9725;
+	--bubble31: #faffb3;
+	--bubble32: #faffb375;
+	--bubble33: #faffb350;
+	--bubble34: #faffb325;
+	--bubble41: #ffffff;
+	--bubble42: #ffffff75;
+	--bubble43: #ffffff50;
+	--bubble44: #ffffff25;
+	--bubble51: #c45dff;
+	--bubble52: #c45dff75;
+	--bubble53: #c45dff50;
+	--bubble54: #c45dff25;
+}
+
+/* Link properties */
+.link:visited,
+.link:active {
+	text-decoration: none;
+}
+
+/* border class - shadow */
+.border {
+	border: 4px inset var(--borderColor);
+	/* box-shadow: 2px 2px 10px 5px var(--borderColor); */
+	border-radius: 40px;
+}
+/* ===== RESETS AND DEFAULTS ===== */
+
+/* Bubbles */
+.bubbles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100%;
+}
+.bubble-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+.particles {
+	position: relative;
+	display: flex;
+	z-index: -5;
+	padding: 0 20px;
+	width: 100%;
+}
+.particles span {
+	position: relative;
+	bottom: 20px;
+	width: 5px;
+	height: 5px;
+	margin: 0 9.5px;
+	border-radius: 50%;
+	animation: animate 30s ease-out infinite;
+	animation-duration: calc(300s / var(--i));
+}
+.particles span:nth-child(1n) {
+	background: var(--bubble11);
+	box-shadow: 0px 0px 40px 20px var(--bubble12), 0 0 100px var(--bubble13);
+}
+.particles span:nth-child(2n) {
+	background: var(--bubble21);
+	box-shadow: 0px 0px 40px 20px var(--bubble22), 0 0 100px var(--bubble23);
+}
+.particles span:nth-child(3n) {
+	background: var(--bubble31);
+	box-shadow: 0px 0px 40px 20px var(--bubble32), 0 0 100px var(--bubble33);
+}
+.particles span:nth-child(4n) {
+	background: var(--bubble41);
+	box-shadow: 0px 0px 40px 20px var(--bubble42), 0 0 100px var(--bubble43);
+}
+.particles span:nth-child(5n) {
+	background: var(--bubble51);
+	box-shadow: 0px 0px 40px 20px var(--bubble52), 0 0 100px var(--bubble53);
+}
+@keyframes animate {
+	0% {
+		transform: translateY(120vh) scale(0.75) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-20vh) scale(0.05) rotate(0deg);
+	}
+}
+
+/* Navbar */
+.navbar {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 5vh;
+	z-index: 100;
+}
+.bullet {
+	color: var(--bulletIdle);
+	font-size: 1.5rem;
+	cursor: pointer;
+	margin: 20px;
+	-webkit-transform: scale(1, 2);
+	-moz-transform: scale(1, 2);
+	-o-transform: scale(1, 2);
+	transform: scale(1, 2);
+}
+.bullet:hover {
+	color: var(--bulletActive);
+	font-size: 1.75rem;
+}
+/* PageHome */
+.slideOne {
+	position: relative;
+	z-index: 5;
+}
+#title {
+	color: rgb(0, 217, 255);
+	font-size: 8rem;
+}
+#james {
+	color: red;
+	font-size: 4rem;
+}
+#fabien {
+	color: orange;
+	font-size: 4rem;
+}
+#riley {
+	color: yellow;
+	font-size: 4rem;
+}
+#sofia {
+	color: green;
+	font-size: 4rem;
+}
+#tracy {
+	color: blue;
+	font-size: 4rem;
+}
+#date {
+	color: white;
+	position: absolute;
+	top: 900px;
+	left: 44.5%;
+	font-size: 2rem;
+	animation: date 12s ease;
+}
+@keyframes date {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* PageOne */
+.slideOne > .slideHeader {
+	animation: slideHeader 6s ease;
+	position: absolute;
+	top: 150px;
+	left: 15%;
+}
+@keyframes slideHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideOne > .pointOne {
+	animation: slideOne_pointOne 8s ease;
+	position: absolute;
+	top: 400px;
+	left: 30%;
+}
+@keyframes slideOne_pointOne {
+	from {
+		left: 2020px;
+		opacity: 0;
+	}
+	to {
+		left: 30%;
+	}
+}
+.slideOne > .pointTwo {
+	animation: slideOne_pointTwo 8s ease;
+	position: absolute;
+	bottom: -800px;
+	left: 25%;
+}
+@keyframes slideOne_pointTwo {
+	from {
+		bottom: 100px;
+		opacity: 0;
+	}
+	to {
+		bottom: -800px;
+	}
+}
+.slideOne > .pointThree {
+	animation: slideOne_pointThree 8s ease;
+	position: absolute;
+	top: 550px;
+	left: 40%;
+}
+@keyframes slideOne_pointThree {
+	from {
+		top: 1180px;
+		opacity: 0;
+	}
+	to {
+		top: 550px;
+	}
+}
+.slideOne > .pointFour {
+	animation: slideOne_pointFour 8s ease;
+	position: absolute;
+	top: 400px;
+	right: 30%;
+}
+@keyframes slideOne_pointFour {
+	from {
+		right: 2020px;
+		opacity: 0;
+	}
+	to {
+		right: 30%;
+	}
+}
+.slideOne > .pointFive {
+	animation: slideOne_pointFive 8s ease;
+	position: absolute;
+	bottom: -800px;
+	right: 25%;
+}
+@keyframes slideOne_pointFive {
+	from {
+		bottom: 100px;
+		opacity: 0;
+	}
+	to {
+		bottom: -800px;
+	}
+}
+.slideOne > .imageOne {
+	animation: imageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	left: 66%;
+}
+@keyframes imageOne {
+	from {
+		left: -300px;
+		opacity: 0;
+	}
+
+	to {
+		/* left: 66%;
+		opacity: 1; */
+	}
+}
+.slideOne > .imageTwo {
+	animation: imageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	right: 66%;
+}
+@keyframes imageTwo {
+	from {
+		right: -300px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+/* PageTwo */
+.slideTwo {
+	position: relative;
+	z-index: 5;
+}
+.slideTwoHeader {
+	animation: slideTwoHeader 4s ease;
+	color: rgb(0, 217, 255);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 35%;
+}
+@keyframes slideTwoHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideTwoPointOne {
+	animation: slideTwoPointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideTwoPointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideTwoPointTwo {
+	animation: slideTwoPointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideTwoPointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideTwoPointThree {
+	animation: slideTwoPointThree 4s ease;
+	position: absolute;
+	top: 675px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideTwoPointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 675px;
+	}
+}
+.slideTwoPointFour {
+	animation: slideTwoPointFour 4s ease;
+	position: absolute;
+	top: 775px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideTwoPointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 775px;
+	}
+}
+.slideTwoImageOne {
+	animation: slideTwoImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	left: 66%;
+}
+@keyframes slideTwoImageOne {
+	from {
+		left: -300px;
+		opacity: 0;
+	}
+
+	to {
+		left: 66%;
+	}
+}
+.slideTwoImageTwo {
+	animation: slideTwoImageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	right: 66%;
+}
+@keyframes slideTwoImageTwo {
+	from {
+		right: -300px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+/* PageThree */
+.slideThree {
+	position: relative;
+	z-index: 5;
+}
+.slideThreeHeader {
+	animation: slideThreeHeader 4s ease;
+	color: rgb(0, 217, 255);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 40%;
+}
+@keyframes slideThreeHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideThreePointOne {
+	animation: slideThreePointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	right: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideThreePointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideThreePointTwo {
+	animation: slideThreePointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	right: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideThreePointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideThreePointThree {
+	animation: slideThreePointThree 4s ease;
+	position: absolute;
+	top: 675px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideThreePointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 675px;
+	}
+}
+.slideThreePointFour {
+	animation: slideThreePointFour 4s ease;
+	position: absolute;
+	top: 775px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideThreePointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 775px;
+	}
+}
+.slideThreeImageOne {
+	animation: slideThreeImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	right: 66%;
+}
+@keyframes slideThreeImageOne {
+	from {
+		right: 100px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+.slideThreeImageTwo {
+	animation: slideThreeImageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	left: 66%;
+}
+@keyframes slideThreeImageTwo {
+	from {
+		left: -100px;
+		opacity: 0;
+	}
+
+	to {
+		left: 66%;
+	}
+}
+/* PageFour */
+.slideFour {
+	position: relative;
+	z-index: 5;
+}
+.slideFourHeader {
+	animation: slideFourHeader 4s ease;
+	color: rgb(0, 217, 255);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 25%;
+}
+@keyframes slideFourHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideFourPointOne {
+	animation: slideFourPointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideFourPointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideFourPointTwo {
+	animation: slideFourPointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideFourPointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideFourPointThree {
+	animation: slideFourPointThree 4s ease;
+	position: absolute;
+	top: 675px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideFourPointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 675px;
+	}
+}
+.slideFourPointFour {
+	animation: slideFourPointFour 4s ease;
+	position: absolute;
+	top: 775px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideFourPointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 775px;
+	}
+}
+.slideFourImageOne {
+	animation: slideFourImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	left: 66%;
+}
+@keyframes slideFourImageOne {
+	from {
+		left: -300px;
+		opacity: 0;
+	}
+
+	to {
+		left: 66%;
+	}
+}
+.slideFourImageTwo {
+	animation: slideFourImageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	right: 66%;
+}
+@keyframes slideFourImageTwo {
+	from {
+		right: -300px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+/* PageFive */
+.slideFive {
+	position: relative;
+	z-index: 5;
+}
+.slideFiveHeader {
+	animation: slideFiveHeader 4s ease;
+	color: rgb(0, 217, 255);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 40%;
+}
+@keyframes slideFiveHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideFivePointOne {
+	animation: slideFivePointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	right: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideFivePointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideFivePointTwo {
+	animation: slideFivePointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	right: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideFivePointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideFivePointThree {
+	animation: slideFivePointThree 4s ease;
+	position: absolute;
+	top: 675px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideFivePointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 675px;
+	}
+}
+.slideFivePointFour {
+	animation: slideFivePointFour 4s ease;
+	position: absolute;
+	top: 775px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideFivePointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 775px;
+	}
+}
+.slideFiveImageOne {
+	animation: slideFiveImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	right: 66%;
+}
+@keyframes slideFiveImageOne {
+	from {
+		right: 100px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+.slideFiveImageTwo {
+	animation: slideFiveImageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	left: 66%;
+}
+@keyframes slideFiveImageTwo {
+	from {
+		left: -100px;
+		opacity: 0;
+	}
+
+	to {
+		left: 66%;
+	}
+}
+/* PageSix */
+.slideSix {
+	position: relative;
+	z-index: 5;
+}
+.slideSixHeader {
+	animation: slideSixHeader 4s ease;
+	color: rgb(255, 0, 0);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 35%;
+}
+@keyframes slideSixHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideSixPointOne {
+	animation: slideSixPointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideSixPointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideSixPointTwo {
+	animation: slideSixPointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideSixPointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideSixPointThree {
+	animation: slideSixPointThree 4s ease;
+	position: absolute;
+	top: 675px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideSixPointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 675px;
+	}
+}
+.slideSixPointFour {
+	animation: slideSixPointFour 4s ease;
+	position: absolute;
+	top: 775px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideSixPointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 775px;
+	}
+}
+.slideSixImageOne {
+	animation: slideSixImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	left: 66%;
+}
+@keyframes slideSixImageOne {
+	from {
+		left: -300px;
+		opacity: 0;
+	}
+
+	to {
+		left: 66%;
+	}
+}
+.slideSixImageTwo {
+	animation: slideSixImageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	right: 66%;
+}
+@keyframes slideSixImageTwo {
+	from {
+		right: -300px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+/* PageSeven */
+.slideSeven {
+	position: relative;
+	z-index: 5;
+}
+.slideSevenHeader {
+	animation: slideSevenHeader 4s ease;
+	color: rgb(255, 0, 0);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 40%;
+}
+@keyframes slideSevenHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideSevenPointOne {
+	animation: slideSevenPointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	right: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideSevenPointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideSevenPointTwo {
+	animation: slideSevenPointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	right: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideSevenPointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideSevenPointThree {
+	animation: slideSevenPointThree 4s ease;
+	position: absolute;
+	top: 700px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideSevenPointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 700px;
+	}
+}
+.slideSevenPointFour {
+	animation: slideSevenPointFour 4s ease;
+	position: absolute;
+	top: 800px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideSevenPointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 800px;
+	}
+}
+.slideSevenImageOne {
+	animation: slideSevenImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	right: 66%;
+}
+@keyframes slideSevenImageOne {
+	from {
+		right: 100px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+.slideSevenImageTwo {
+	animation: slideSevenImageTwo 4s ease;
+	position: absolute;
+	width: 900px;
+	top: 450px;
+	left: 38%;
+}
+@keyframes slideSevenImageTwo {
+	from {
+		left: -100px;
+		opacity: 0;
+	}
+
+	to {
+		left: 38%;
+	}
+}
+/* PageEight */
+.slideEight {
+	position: relative;
+	z-index: 5;
+}
+.slideEightHeader {
+	animation: slideEightHeader 4s ease;
+	color: rgb(0, 217, 255);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 30%;
+}
+@keyframes slideEightHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideEightPointOne {
+	animation: slideEightPointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideEightPointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideEightPointTwo {
+	animation: slideEightPointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideEightPointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideEightPointThree {
+	animation: slideEightPointThree 4s ease;
+	position: absolute;
+	top: 675px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideEightPointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 675px;
+	}
+}
+.slideEightPointFour {
+	animation: slideEightPointFour 4s ease;
+	position: absolute;
+	top: 775px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideEightPointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 775px;
+	}
+}
+.slideEightImageOne {
+	animation: slideEightImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	left: 66%;
+}
+@keyframes slideEightImageOne {
+	from {
+		left: -300px;
+		opacity: 0;
+	}
+
+	to {
+		left: 66%;
+	}
+}
+.slideEightImageTwo {
+	animation: slideEightImageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	right: 66%;
+}
+@keyframes slideEightImageTwo {
+	from {
+		right: -300px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+/* PageNine */
+.slideNine {
+	position: relative;
+	z-index: 5;
+}
+.slideNineHeader {
+	animation: slideNineHeader 4s ease;
+	color: rgb(0, 217, 255);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 40%;
+}
+@keyframes slideNineHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideNinePointOne {
+	animation: slideNinePointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	right: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideNinePointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideNinePointTwo {
+	animation: slideNinePointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	right: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideNinePointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideNinePointThree {
+	animation: slideNinePointThree 4s ease;
+	position: absolute;
+	top: 675px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideNinePointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 675px;
+	}
+}
+.slideNinePointFour {
+	animation: slideNinePointFour 4s ease;
+	position: absolute;
+	top: 775px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideNinePointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 775px;
+	}
+}
+.slideNineImageOne {
+	animation: slideNineImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	right: 66%;
+}
+@keyframes slideNineImageOne {
+	from {
+		right: 100px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+.slideNineImageTwo {
+	animation: slideNineImageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	left: 66%;
+}
+@keyframes slideNineImageTwo {
+	from {
+		left: -100px;
+		opacity: 0;
+	}
+
+	to {
+		left: 66%;
+	}
+}
+/* PageTen */
+.slideTen {
+	position: relative;
+	z-index: 5;
+}
+.slideTenHeader {
+	animation: slideTenHeader 4s ease;
+	color: rgb(0, 217, 255);
+	font-size: 4rem;
+	position: absolute;
+	top: 150px;
+	left: 35%;
+}
+@keyframes slideTenHeader {
+	from {
+		top: -150px;
+		opacity: 0;
+	}
+	to {
+		top: 150px;
+	}
+}
+.slideTenPointOne {
+	animation: slideTenPointOne 4s ease;
+	position: absolute;
+	top: 275px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideTenPointOne {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 275px;
+	}
+}
+.slideTenPointTwo {
+	animation: slideTenPointTwo 4s ease;
+	position: absolute;
+	top: 375px;
+	left: 15%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideTenPointTwo {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 375px;
+	}
+}
+.slideTenPointThree {
+	animation: slideTenPointThree 4s ease;
+	position: absolute;
+	top: 675px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideTenPointThree {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 675px;
+	}
+}
+.slideTenPointFour {
+	animation: slideTenPointFour 4s ease;
+	position: absolute;
+	top: 775px;
+	left: 40%;
+	color: var(--color1);
+	font-size: 3rem;
+}
+@keyframes slideTenPointFour {
+	from {
+		top: 1250px;
+	}
+	to {
+		top: 775px;
+	}
+}
+.slideTenImageOne {
+	animation: slideTenImageOne 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 150px;
+	left: 66%;
+}
+@keyframes slideTenImageOne {
+	from {
+		left: -300px;
+		opacity: 0;
+	}
+
+	to {
+		left: 66%;
+	}
+}
+.slideTenImageTwo {
+	animation: slideTenImageTwo 4s ease;
+	position: absolute;
+	width: 400px;
+	top: 505px;
+	right: 66%;
+}
+@keyframes slideTenImageTwo {
+	from {
+		right: -300px;
+		opacity: 0;
+	}
+
+	to {
+		right: 66%;
+	}
+}
+/* Misc. */
+.buttonActive {
+	color: var(--bulletActive);
+	font-size: 1.75rem;
+}
+.hide {
+	display: none;
+}
