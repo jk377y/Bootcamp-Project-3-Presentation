@@ -10,7 +10,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	line-height: 1.5;
-	background-image: url(/assets/images/background.JPG);
+	background-image: url(../images/background.JPG);
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: -100;
