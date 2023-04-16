@@ -16,6 +16,14 @@ body {
 	z-index: -100;
 	position: relative;
 	overflow: hidden;
+	font-family: 'Orbitron', sans-serif;
+	letter-spacing: 3px;
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2rem;
 }
 /* var() values for group coloring */
 :root {
@@ -159,35 +167,47 @@ body {
 }
 #title {
 	color: rgb(0, 217, 255);
-	font-size: 8rem;
+	text-shadow: 2px 2px 8px rgb(0, 217, 255);
+	font-size: 6rem;
+}
+#title span {
+	color: white;
+	text-shadow: 2px 2px 8px white;
 }
 #james {
 	color: red;
-	font-size: 4rem;
+	text-shadow: 2px 2px 5px red;
+	font-size: 3rem;
 }
 #fabien {
 	color: orange;
-	font-size: 4rem;
+	text-shadow: 2px 2px 5px orange;
+	font-size: 3rem;
 }
 #riley {
-	color: yellow;
-	font-size: 4rem;
+	color: rgb(255, 255, 0);
+	text-shadow: 2px 2px 5px rgb(255, 255, 0);
+	font-size: 3rem;
 }
 #sofia {
-	color: green;
-	font-size: 4rem;
+	color: rgb(4, 253, 4);
+	text-shadow: 2px 2px 5px rgb(4, 253, 4);
+	font-size: 3rem;
 }
 #tracy {
-	color: blue;
-	font-size: 4rem;
+	color: rgb(0, 153, 255);
+	text-shadow: 2px 2px 5px rgb(0, 153, 255);
+	font-size: 3rem;
 }
 #date {
 	color: white;
+	text-shadow: 2px 2px 5px white;
+	backdrop-filter: brightness(125%);
 	position: absolute;
 	top: 900px;
-	left: 44.5%;
+	left: 42%;
 	font-size: 2rem;
-	animation: date 12s ease;
+	animation: date 6s ease;
 }
 @keyframes date {
 	0% {
@@ -202,7 +222,7 @@ body {
 	animation: slideHeader 6s ease;
 	position: absolute;
 	top: 150px;
-	left: 15%;
+	left: 19%;
 }
 @keyframes slideHeader {
 	from {
@@ -217,7 +237,7 @@ body {
 	animation: slideOne_pointOne 8s ease;
 	position: absolute;
 	top: 400px;
-	left: 30%;
+	left: 27.5%;
 }
 @keyframes slideOne_pointOne {
 	from {
@@ -225,14 +245,14 @@ body {
 		opacity: 0;
 	}
 	to {
-		left: 30%;
+		left: 27.5%;
 	}
 }
 .slideOne > .pointTwo {
 	animation: slideOne_pointTwo 8s ease;
 	position: absolute;
 	bottom: -800px;
-	left: 25%;
+	left: 24%;
 }
 @keyframes slideOne_pointTwo {
 	from {
@@ -277,7 +297,7 @@ body {
 	animation: slideOne_pointFive 8s ease;
 	position: absolute;
 	bottom: -800px;
-	right: 25%;
+	right: 23.5%;
 }
 @keyframes slideOne_pointFive {
 	from {
@@ -288,42 +308,6 @@ body {
 		bottom: -800px;
 	}
 }
-.slideOne > .imageOne {
-	animation: imageOne 4s ease;
-	position: absolute;
-	width: 400px;
-	top: 150px;
-	left: 66%;
-}
-@keyframes imageOne {
-	from {
-		left: -300px;
-		opacity: 0;
-	}
-
-	to {
-		/* left: 66%;
-		opacity: 1; */
-	}
-}
-.slideOne > .imageTwo {
-	animation: imageTwo 4s ease;
-	position: absolute;
-	width: 400px;
-	top: 505px;
-	right: 66%;
-}
-@keyframes imageTwo {
-	from {
-		right: -300px;
-		opacity: 0;
-	}
-
-	to {
-		right: 66%;
-	}
-}
-/* PageTwo */
 .slideTwo {
 	position: relative;
 	z-index: 5;
@@ -331,7 +315,7 @@ body {
 .slideTwoHeader {
 	animation: slideTwoHeader 4s ease;
 	color: rgb(0, 217, 255);
-	font-size: 4rem;
+	/* font-size: 3.5rem; */
 	position: absolute;
 	top: 150px;
 	left: 35%;
@@ -351,7 +335,7 @@ body {
 	top: 275px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideTwoPointOne {
 	from {
@@ -367,7 +351,7 @@ body {
 	top: 375px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideTwoPointTwo {
 	from {
@@ -383,7 +367,7 @@ body {
 	top: 675px;
 	left: 40%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideTwoPointThree {
 	from {
@@ -399,7 +383,7 @@ body {
 	top: 775px;
 	left: 40%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideTwoPointFour {
 	from {
@@ -451,7 +435,7 @@ body {
 .slideThreeHeader {
 	animation: slideThreeHeader 4s ease;
 	color: rgb(0, 217, 255);
-	font-size: 4rem;
+	/* font-size: 4rem; */
 	position: absolute;
 	top: 150px;
 	left: 40%;
@@ -471,7 +455,7 @@ body {
 	top: 275px;
 	right: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideThreePointOne {
 	from {
@@ -487,7 +471,7 @@ body {
 	top: 375px;
 	right: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideThreePointTwo {
 	from {
@@ -503,7 +487,7 @@ body {
 	top: 675px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideThreePointThree {
 	from {
@@ -519,7 +503,7 @@ body {
 	top: 775px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideThreePointFour {
 	from {
@@ -571,7 +555,7 @@ body {
 .slideFourHeader {
 	animation: slideFourHeader 4s ease;
 	color: rgb(0, 217, 255);
-	font-size: 4rem;
+	/* font-size: 4rem; */
 	position: absolute;
 	top: 150px;
 	left: 25%;
@@ -591,7 +575,7 @@ body {
 	top: 275px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideFourPointOne {
 	from {
@@ -607,7 +591,7 @@ body {
 	top: 375px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideFourPointTwo {
 	from {
@@ -621,9 +605,9 @@ body {
 	animation: slideFourPointThree 4s ease;
 	position: absolute;
 	top: 675px;
-	left: 40%;
+	left: 36%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideFourPointThree {
 	from {
@@ -637,9 +621,9 @@ body {
 	animation: slideFourPointFour 4s ease;
 	position: absolute;
 	top: 775px;
-	left: 40%;
+	left: 36%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideFourPointFour {
 	from {
@@ -691,7 +675,7 @@ body {
 .slideFiveHeader {
 	animation: slideFiveHeader 4s ease;
 	color: rgb(0, 217, 255);
-	font-size: 4rem;
+	/* font-size: 4rem; */
 	position: absolute;
 	top: 150px;
 	left: 40%;
@@ -711,7 +695,7 @@ body {
 	top: 275px;
 	right: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideFivePointOne {
 	from {
@@ -727,7 +711,7 @@ body {
 	top: 375px;
 	right: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideFivePointTwo {
 	from {
@@ -743,7 +727,7 @@ body {
 	top: 675px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideFivePointThree {
 	from {
@@ -759,7 +743,7 @@ body {
 	top: 775px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideFivePointFour {
 	from {
@@ -811,7 +795,7 @@ body {
 .slideSixHeader {
 	animation: slideSixHeader 4s ease;
 	color: rgb(255, 0, 0);
-	font-size: 4rem;
+	/* font-size: 4rem; */
 	position: absolute;
 	top: 150px;
 	left: 35%;
@@ -831,7 +815,7 @@ body {
 	top: 275px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideSixPointOne {
 	from {
@@ -847,7 +831,7 @@ body {
 	top: 375px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideSixPointTwo {
 	from {
@@ -861,9 +845,9 @@ body {
 	animation: slideSixPointThree 4s ease;
 	position: absolute;
 	top: 675px;
-	left: 40%;
+	left: 37%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideSixPointThree {
 	from {
@@ -877,9 +861,9 @@ body {
 	animation: slideSixPointFour 4s ease;
 	position: absolute;
 	top: 775px;
-	left: 40%;
+	left: 37%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideSixPointFour {
 	from {
@@ -931,7 +915,7 @@ body {
 .slideSevenHeader {
 	animation: slideSevenHeader 4s ease;
 	color: rgb(255, 0, 0);
-	font-size: 4rem;
+	/* font-size: 4rem; */
 	position: absolute;
 	top: 150px;
 	left: 40%;
@@ -951,7 +935,7 @@ body {
 	top: 275px;
 	right: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideSevenPointOne {
 	from {
@@ -967,7 +951,7 @@ body {
 	top: 375px;
 	right: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideSevenPointTwo {
 	from {
@@ -983,7 +967,7 @@ body {
 	top: 700px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideSevenPointThree {
 	from {
@@ -999,7 +983,7 @@ body {
 	top: 800px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideSevenPointFour {
 	from {
@@ -1051,7 +1035,7 @@ body {
 .slideEightHeader {
 	animation: slideEightHeader 4s ease;
 	color: rgb(0, 217, 255);
-	font-size: 4rem;
+	/* font-size: 4rem; */
 	position: absolute;
 	top: 150px;
 	left: 30%;
@@ -1071,7 +1055,7 @@ body {
 	top: 275px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideEightPointOne {
 	from {
@@ -1087,7 +1071,7 @@ body {
 	top: 375px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideEightPointTwo {
 	from {
@@ -1103,7 +1087,7 @@ body {
 	top: 675px;
 	left: 40%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideEightPointThree {
 	from {
@@ -1119,7 +1103,7 @@ body {
 	top: 775px;
 	left: 40%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideEightPointFour {
 	from {
@@ -1171,7 +1155,7 @@ body {
 .slideNineHeader {
 	animation: slideNineHeader 4s ease;
 	color: rgb(0, 217, 255);
-	font-size: 4rem;
+	/* font-size: 4rem; */
 	position: absolute;
 	top: 150px;
 	left: 40%;
@@ -1191,7 +1175,7 @@ body {
 	top: 275px;
 	right: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideNinePointOne {
 	from {
@@ -1207,7 +1191,7 @@ body {
 	top: 375px;
 	right: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideNinePointTwo {
 	from {
@@ -1223,7 +1207,7 @@ body {
 	top: 675px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideNinePointThree {
 	from {
@@ -1239,7 +1223,7 @@ body {
 	top: 775px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	/* font-size: 3rem; */
 }
 @keyframes slideNinePointFour {
 	from {
@@ -1291,7 +1275,7 @@ body {
 .slideTenHeader {
 	animation: slideTenHeader 4s ease;
 	color: rgb(0, 217, 255);
-	font-size: 4rem;
+	/* font-size: 4rem; */
 	position: absolute;
 	top: 150px;
 	left: 35%;
@@ -1311,7 +1295,7 @@ body {
 	top: 275px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	font-size: 1.5rem;
 }
 @keyframes slideTenPointOne {
 	from {
@@ -1327,7 +1311,7 @@ body {
 	top: 375px;
 	left: 15%;
 	color: var(--color1);
-	font-size: 3rem;
+	font-size: 1.5rem;
 }
 @keyframes slideTenPointTwo {
 	from {
@@ -1341,9 +1325,9 @@ body {
 	animation: slideTenPointThree 4s ease;
 	position: absolute;
 	top: 675px;
-	left: 40%;
+	left: 36%;
 	color: var(--color1);
-	font-size: 3rem;
+	font-size: 1.5rem;
 }
 @keyframes slideTenPointThree {
 	from {
@@ -1357,9 +1341,9 @@ body {
 	animation: slideTenPointFour 4s ease;
 	position: absolute;
 	top: 775px;
-	left: 40%;
+	left: 36%;
 	color: var(--color1);
-	font-size: 3rem;
+	font-size: 1.5rem;
 }
 @keyframes slideTenPointFour {
 	from {
